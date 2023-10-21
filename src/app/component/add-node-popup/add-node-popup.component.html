@@ -1,0 +1,11 @@
+<div class="tree-container">
+  <div class="form-title align-justify-center">
+    <mat-card-title>Add New Node</mat-card-title>
+  </div>
+  <div class="form-tree">
+    <app-add-node [node]="treeNodeList"></app-add-node>
+  </div>
+  <div class="align-justify-center">
+    <button mat-raised-button color="primary" type="submit" (click)="addNewNode()">Create Node</button>
+  </div>
+</div>

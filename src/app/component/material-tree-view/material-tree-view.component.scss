@@ -1,0 +1,69 @@
+.material-view-section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .titile {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .head-section {
+    padding: 20px;
+
+    .form-row {
+      width: 30%;
+    }
+
+    .align-add-select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .tree-section {
+    padding: 20px;
+    overflow: auto;
+    height: calc(100% - 240px);
+
+    .mat-tree-node {
+      border: 1px solid #41c1f0;
+      margin-bottom: 15px;
+    }
+
+    .isChild-node {
+      margin-left: 15px;
+    }
+
+    .display-name {
+      width: calc(100% - 170px);
+    }
+
+    .display-name-child {
+      width: calc(100% - 85px);
+    }
+
+    .check-box {
+      padding-right: 20px;
+    }
+
+    .child-check-box {
+      padding: 15px;
+    }
+
+    .padding-10px {
+      padding: 10px;
+    }
+  }
+}
+
+::ng-deep {
+  .mat-form-field-infix {
+    padding: .5em 0 .5em 0 !important;
+  }
+
+  .mat-dialog-container {
+    overflow: hidden !important;
+  }
+}

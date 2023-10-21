@@ -1,0 +1,20 @@
+<div class="tree-node-field" [formGroup]="treeNodeForm">
+    <mat-icon class="mat-icon-rtl-mirror" (click)="node.expanded = !node.expanded">
+        <span *ngIf="node.children && node.children.length">
+            {{node.expanded ? 'expand_more' : 'chevron_right'}}
+        </span>
+
+    </mat-icon>
+    <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter Node Name" [(ngModel)]="node.name" formControlName="treeNodeName">
+        <mat-error *ngIf="treeNodeForm?.get('treeNodeName')?.hasError('required')">
+            Name is required
+        </mat-error>
+    </mat-form-field>
+    <mat-icon (click)="addChild(node)">add</mat-icon>
+    <div *ngIf="node.expanded && node.children && node.children.length">
+        <div *ngFor="let child of node.children">
+            <app-add-node [node]="child"></app-add-node>
+        </div>
+    </div>
+</div>
