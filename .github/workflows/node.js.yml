@@ -33,5 +33,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/tree-view
+        publish_dir: ./dist/nested-tree-view
         publish_branch: gh-pages
